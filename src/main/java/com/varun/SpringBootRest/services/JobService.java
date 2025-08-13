@@ -39,4 +39,12 @@ public class JobService {
 //        jobRepo.deleteJob(postId);
         jobRepo.deleteById(postId);
     }
+
+    public void addMultipleJobs(List<JobPost> jobPosts) {
+        jobRepo.saveAll(jobPosts);
+    }
+
+    public List<JobPost> searchJobPosts(String keyword) {
+        return jobRepo.findByPostProfileContainingOrPostDescContaining(keyword, keyword);
+    }
 }

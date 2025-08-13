@@ -23,10 +23,21 @@ public class JobRestController {
         return service.getJob(postId);
     }
 
-    @PostMapping(path="job_post")
+    @GetMapping("job_posts_by_keyword")
+    public List<JobPost> getJobPostsByKeyword(@RequestParam String keyword) {
+        return service.searchJobPosts(keyword);
+    }
+
+    @PostMapping(path="job_post", consumes = {"application/json"})
     public JobPost addJob(@RequestBody JobPost jobPost) {
         service.addJob(jobPost);
         return service.getJob(jobPost.getPostId());
+    }
+
+    @PostMapping(path="job_posts")
+    public String addMultipleJobs(@RequestBody List<JobPost> jobPosts) {
+        service.addMultipleJobs(jobPosts);
+        return "Jobs added successfully";
     }
 
     @PutMapping("job_post")
