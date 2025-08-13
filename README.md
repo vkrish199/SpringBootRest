@@ -19,3 +19,6 @@ Spring boot rest mvc example:
 14. The same applies for what data controller can receive/consume
     For this we can use consumes property in the mapping
     Ex: @PostMapping(path="job_post", consumes = {"application/xml"})
+================================================================================
+
+This whole project is now migrated to use Spring Data JPA ORM with postgresql DB
