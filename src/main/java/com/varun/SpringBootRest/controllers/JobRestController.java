@@ -23,7 +23,7 @@ public class JobRestController {
         return service.getJob(postId);
     }
 
-    @PostMapping(path="job_post", consumes = {"application/xml"})
+    @PostMapping(path="job_post")
     public JobPost addJob(@RequestBody JobPost jobPost) {
         service.addJob(jobPost);
         return service.getJob(jobPost.getPostId());
