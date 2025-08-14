@@ -22,3 +22,17 @@ Spring boot rest mvc example:
 ================================================================================
 
 This whole project is now migrated to use Spring Data JPA ORM with postgresql DB
+
+Aspect oriented programming:
+https://docs.spring.io/spring-framework/reference/core/aop/introduction-defn.html
+
+1. joint point - When it happens
+2. Advice - what happens
+3. Aspect - where the logic is written for what needs to happen
+4. Pointcut - where it actually happens
+5. Target object - which obj will experience this advice
+6. Weaving - how it happens
+7. Proxy - proxy object which makes main object look good
+8. Type of advice: Before, After, After throwing, Around
+9. Refer LoggingAspect class - we need to use @Aspect annotation
+10. Methods need to be annotated with few annotations 
