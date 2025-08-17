@@ -36,3 +36,6 @@ https://docs.spring.io/spring-framework/reference/core/aop/introduction-defn.htm
 8. Type of advice: Before, After, After throwing, Around
 9. Refer LoggingAspect class - we need to use @Aspect annotation
 10. Methods need to be annotated with few annotations 
+=================================================================================
+
+This whole project is now secured with spring security
